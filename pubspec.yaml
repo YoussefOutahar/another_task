@@ -14,13 +14,16 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   
+  # UI
+  firebase_ui_auth: ^1.16.0
+
+  # Utils
+  go_router: ^14.4.0
+
   # Bloc
   flutter_bloc: ^8.1.6
   bloc: ^8.1.4
   equatable: ^2.0.5
-
-  # UI
-  firebase_ui_auth: ^1.16.0
 
   # Firebase & Cloud Services
   firebase_core: ^3.6.0
@@ -30,8 +33,6 @@ dependencies:
   google_mobile_ads: ^4.0.0
   shimmer: ^3.0.0
   onesignal_flutter: ^5.2.6
-
-  # Utils
 
 dev_dependencies:
   flutter_test:
