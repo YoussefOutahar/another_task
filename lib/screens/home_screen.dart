@@ -1,16 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../bloc/task_bloc.dart';
+import '../bloc/task/task_bloc.dart';
 import '../models/task.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
+  late TabController tabController;
+  @override
+  void initState() {
+    tabController = TabController(length: 4, vsync: this);
+    tabController.addListener(() {
+      setState(() {});
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.brown.shade900,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -18,12 +32,11 @@ class HomeScreen extends StatelessWidget {
           'Tasks',
           style: TextStyle(color: Colors.white),
         ),
-        actions: [
+        actions: const [
           CircleAvatar(
-            backgroundColor: Colors.brown.shade800,
-            child: const Icon(Icons.person, color: Colors.white),
+            child: Icon(Icons.person, color: Colors.white),
           ),
-          const SizedBox(width: 16),
+          SizedBox(width: 16),
         ],
       ),
       body: Column(
@@ -35,11 +48,8 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.brown,
         child: const Icon(Icons.add),
-        onPressed: () {
-          // Add task logic
-        },
+        onPressed: () {},
       ),
     );
   }
@@ -65,7 +75,7 @@ class HomeScreen extends StatelessWidget {
       padding: const EdgeInsets.only(right: 16),
       child: Column(
         children: [
-          if (showIcon) Icon(icon, color: Colors.brown),
+          if (showIcon) Icon(icon),
           Text(
             text,
             style: TextStyle(

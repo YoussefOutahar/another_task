@@ -1,4 +1,5 @@
-import 'package:another_task/bloc/task_bloc.dart';
+import 'package:another_task/bloc/task/task_bloc.dart';
+import 'package:another_task/bloc/taskGroup/task_group_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -21,6 +22,9 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => TaskBloc()..add(LoadTasks()),
+        ),
+        BlocProvider(
+          create: (context) => TaskGroupBloc()..add((LoadTaskGroups())),
         )
       ],
       child: MaterialApp(
