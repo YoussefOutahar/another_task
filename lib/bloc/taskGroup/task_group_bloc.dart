@@ -7,7 +7,23 @@ part 'task_group_event.dart';
 part 'task_group_state.dart';
 
 class TaskGroupBloc extends Bloc<TaskGroupEvent, TaskGroupState> {
-  List<TaskGroup> _taskGroups = [];
+  List<TaskGroup> _taskGroups = [
+    const TaskGroup(
+      id: '1',
+      title: 'Personal',
+      taskIds: ['1', '2', '3'],
+    ),
+    const TaskGroup(
+      id: '2',
+      title: 'Work',
+      taskIds: ['4', '5'],
+    ),
+    const TaskGroup(
+      id: '3',
+      title: 'Meeting',
+      taskIds: ['6'],
+    ),
+  ];
 
   TaskGroupBloc() : super(TaskGroupInitial()) {
     on<LoadTaskGroups>(_onLoadTaskGroups);

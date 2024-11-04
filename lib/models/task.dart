@@ -60,16 +60,3 @@ class Task extends Equatable {
     };
   }
 }
-
-List<Task> tasks = [
-  const Task(
-    id: '1',
-    title: 'Check invitation maker',
-    category: 'Daily',
-  ),
-  const Task(
-    id: '2',
-    title: 'Watch life of pie',
-    category: 'Daily',
-  ),
-];
