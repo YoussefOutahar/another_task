@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "491964812562",
+    "project_id": "anothertask-5b48b",
+    "storage_bucket": "anothertask-5b48b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:491964812562:android:479980091ccb9fcddb37cb",
+        "android_client_info": {
+          "package_name": "com.yorastd.anothertask"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDggiRt0U_XhW9ieNEO0mbMr78qN4jbsFc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
